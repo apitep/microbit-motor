@@ -34,7 +34,8 @@ IrRemote.onPressEvent(RemoteButton.A, function () {
         . . . . .
         . . . . .
         `)
-    magicbit.Servo(magicbit.Servos.S2, 0)
+    magicbit.Servo(magicbit.Servos.S7, 0)
+    magicbit.Servo(magicbit.Servos.S8, 0)
 })
 IrRemote.onPressEvent(RemoteButton.NUM6, function () {
     basic.showString("6")
@@ -61,7 +62,7 @@ IrRemote.onPressEvent(RemoteButton.Left, function () {
         . . . . .
         `)
     magicbit.GeekServo(magicbit.Servos.S1, avant)
-    magicbit.GeekServo(magicbit.Servos.S8, avant)
+    magicbit.GeekServo(magicbit.Servos.S2, avant)
 })
 IrRemote.onPressEvent(RemoteButton.B, function () {
     basic.showLeds(`
@@ -78,7 +79,8 @@ IrRemote.onPressEvent(RemoteButton.B, function () {
         . # . # .
         . # . # .
         `)
-    magicbit.Servo(magicbit.Servos.S2, 180)
+    magicbit.Servo(magicbit.Servos.S7, 180)
+    magicbit.Servo(magicbit.Servos.S8, 180)
 })
 IrRemote.onPressEvent(RemoteButton.NUM4, function () {
     basic.showString("4")
@@ -99,7 +101,7 @@ IrRemote.onPressEvent(RemoteButton.Down, function () {
         . . # . .
         `)
     magicbit.GeekServo(magicbit.Servos.S1, arriere)
-    magicbit.GeekServo(magicbit.Servos.S8, arriere)
+    magicbit.GeekServo(magicbit.Servos.S2, arriere)
 })
 IrRemote.onPressEvent(RemoteButton.Add, function () {
     basic.showString("+")
@@ -120,7 +122,7 @@ IrRemote.onPressEvent(RemoteButton.C, function () {
         . . . . .
         `)
     magicbit.GeekServo(magicbit.Servos.S1, stop)
-    magicbit.GeekServo(magicbit.Servos.S8, stop)
+    magicbit.GeekServo(magicbit.Servos.S2, stop)
 })
 let stop = 0
 let arriere = 0
