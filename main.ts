@@ -21,10 +21,9 @@ basic.forever(function () {
             # . . . #
             # # # # #
             `)
-        music.playMelody("C5 B A G F E D C ", 120)
         magicbit.MotorStopAll()
-        magicbit.GeekServo(magicbit.Servos.S1, servo1)
-        magicbit.GeekServo(magicbit.Servos.S2, servo2)
+        magicbit.GeekServo(magicbit.Servos.S1, servo1 + 10)
+        magicbit.GeekServo(magicbit.Servos.S2, servo2 + 10)
     }
     if (input.buttonIsPressed(Button.A)) {
         basic.showLeds(`
