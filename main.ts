@@ -111,6 +111,8 @@ IrRemote.onPressEvent(RemoteButton.B, function () {
         . # . # .
         `)
 })
+// remote control: 
+// marche arrière
 IrRemote.onPressEvent(RemoteButton.NUM4, function () {
     magicbit.GeekServo(magicbit.Servos.S1, avant)
     magicbit.GeekServo(magicbit.Servos.S2, arriere)
@@ -124,7 +126,7 @@ IrRemote.onPressEvent(RemoteButton.NUM4, function () {
         . . # . .
         `)
 })
-// tourne gauche
+// 
 IrRemote.onPressEvent(RemoteButton.Down, function () {
 	
 })
