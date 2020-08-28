@@ -1,8 +1,18 @@
 IrRemote.onPressEvent(RemoteButton.NUM9, function () {
     basic.showString("9")
 })
+// remote control: VGA
+// tourne droite
 IrRemote.onPressEvent(RemoteButton.NUM0, function () {
-    basic.showString("0")
+    magicbit.GeekServo(magicbit.Servos.S1, avant)
+    magicbit.GeekServo(magicbit.Servos.S2, avant)
+    basic.showLeds(`
+        . . # . .
+        . . # # .
+        # # # # #
+        . . # # .
+        . . # . .
+        `)
 })
 IrRemote.onPressEvent(RemoteButton.NUM7, function () {
     basic.showString("7")
@@ -10,16 +20,41 @@ IrRemote.onPressEvent(RemoteButton.NUM7, function () {
 IrRemote.onPressEvent(RemoteButton.NUM8, function () {
     basic.showString("8")
 })
+// remote control: up
 IrRemote.onPressEvent(RemoteButton.EQ, function () {
-    basic.showString("-")
+    magicbit.GeekServo(magicbit.Servos.S1, arriere)
+    magicbit.GeekServo(magicbit.Servos.S2, avant)
+    magicbit.GeekServo(magicbit.Servos.S3, avant)
+    magicbit.GeekServo(magicbit.Servos.S4, arriere)
+    basic.showLeds(`
+        . . # . .
+        . # # # .
+        # # # # #
+        . . # . .
+        . . # . .
+        `)
 })
 IrRemote.onPressEvent(RemoteButton.NUM3, function () {
     basic.showString("3")
 })
+// remote control: list
+// stop
 IrRemote.onPressEvent(RemoteButton.NUM1, function () {
-    basic.showString("1")
+    magicbit.GeekServo(magicbit.Servos.S1, stop)
+    magicbit.GeekServo(magicbit.Servos.S2, stop)
+    magicbit.GeekServo(magicbit.Servos.S3, stop)
+    magicbit.GeekServo(magicbit.Servos.S4, stop)
+    basic.showLeds(`
+        . . . . .
+        # # # # #
+        # # # # #
+        # # # # #
+        . . . . .
+        `)
 })
 IrRemote.onPressEvent(RemoteButton.A, function () {
+    magicbit.Servo(magicbit.Servos.S7, 30)
+    magicbit.Servo(magicbit.Servos.S8, 30)
     basic.showLeds(`
         # . # . #
         . . . . .
@@ -34,8 +69,6 @@ IrRemote.onPressEvent(RemoteButton.A, function () {
         . . . . .
         . . . . .
         `)
-    magicbit.Servo(magicbit.Servos.S7, 0)
-    magicbit.Servo(magicbit.Servos.S8, 0)
 })
 IrRemote.onPressEvent(RemoteButton.NUM6, function () {
     basic.showString("6")
@@ -43,86 +76,64 @@ IrRemote.onPressEvent(RemoteButton.NUM6, function () {
 IrRemote.onPressEvent(RemoteButton.NUM5, function () {
     basic.showString("5")
 })
+// remote control: HDMI
+// tourne gauche
 IrRemote.onPressEvent(RemoteButton.NUM2, function () {
-    basic.showString("2")
-})
-IrRemote.onPressEvent(RemoteButton.Left, function () {
-    basic.showLeds(`
-        # . # . #
-        . . . . .
-        # . . . #
-        . . . . .
-        # . # . #
-        `)
-    basic.showLeds(`
-        . . . . .
-        . . . . .
-        # # # # #
-        . . . . .
-        . . . . .
-        `)
-    magicbit.GeekServo(magicbit.Servos.S1, avant)
-    magicbit.GeekServo(magicbit.Servos.S2, avant)
-})
-IrRemote.onPressEvent(RemoteButton.B, function () {
-    basic.showLeds(`
-        # . # . #
-        . . . . .
-        # . . . #
-        . . . . .
-        # . # . #
-        `)
-    basic.showLeds(`
-        . # . # .
-        . # . # .
-        # # # # #
-        . # . # .
-        . # . # .
-        `)
-    magicbit.Servo(magicbit.Servos.S7, 180)
-    magicbit.Servo(magicbit.Servos.S8, 180)
-})
-IrRemote.onPressEvent(RemoteButton.NUM4, function () {
-    basic.showString("4")
-})
-IrRemote.onPressEvent(RemoteButton.Down, function () {
-    basic.showLeds(`
-        # . # . #
-        . . . . .
-        # . . . #
-        . . . . .
-        # . # . #
-        `)
-    basic.showLeds(`
-        . . # . .
-        . . # . .
-        # # # # #
-        . . # . .
-        . . # . .
-        `)
     magicbit.GeekServo(magicbit.Servos.S1, arriere)
     magicbit.GeekServo(magicbit.Servos.S2, arriere)
+    basic.showLeds(`
+        . . # . .
+        . # # . .
+        # # # # #
+        . # # . .
+        . . # . .
+        `)
+})
+// tourne droite
+IrRemote.onPressEvent(RemoteButton.Left, function () {
+	
+})
+IrRemote.onPressEvent(RemoteButton.B, function () {
+    magicbit.Servo(magicbit.Servos.S7, 180)
+    magicbit.Servo(magicbit.Servos.S8, 180)
+    basic.showLeds(`
+        # . # . #
+        . . . . .
+        # . . . #
+        . . . . .
+        # . # . #
+        `)
+    basic.showLeds(`
+        . # . # .
+        . # . # .
+        # # # # #
+        . # . # .
+        . # . # .
+        `)
+})
+IrRemote.onPressEvent(RemoteButton.NUM4, function () {
+    magicbit.GeekServo(magicbit.Servos.S1, avant)
+    magicbit.GeekServo(magicbit.Servos.S2, arriere)
+    magicbit.GeekServo(magicbit.Servos.S3, arriere)
+    magicbit.GeekServo(magicbit.Servos.S4, avant)
+    basic.showLeds(`
+        . . # . .
+        . . # . .
+        # # # # #
+        . # # # .
+        . . # . .
+        `)
+})
+// tourne gauche
+IrRemote.onPressEvent(RemoteButton.Down, function () {
+	
 })
 IrRemote.onPressEvent(RemoteButton.Add, function () {
     basic.showString("+")
 })
+// remote control: list
 IrRemote.onPressEvent(RemoteButton.C, function () {
-    basic.showLeds(`
-        # # # # #
-        . . . . .
-        # # # # #
-        . . . . .
-        # # # # #
-        `)
-    basic.showLeds(`
-        . . . . .
-        # # # # #
-        # # # # #
-        # # # # #
-        . . . . .
-        `)
-    magicbit.GeekServo(magicbit.Servos.S1, stop)
-    magicbit.GeekServo(magicbit.Servos.S2, stop)
+	
 })
 let stop = 0
 let arriere = 0
